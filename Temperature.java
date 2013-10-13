@@ -36,7 +36,10 @@ public class Temperature {
    * @param units {@code Units} of {@code Temperature}
    */
   public Temperature (double value, Temperature.Units units) {
-      this.units    = units;
+      if(value < 0 && units == Units.KELVIN) {
+    	  throw new IllegalArgumentException();
+      }
+	  this.units    = units;
       valueInKelvin = convertToKelvin(value);
   }
 
