@@ -97,9 +97,9 @@ public class Temperature {
       switch (units) {
           case KELVIN:     formattedUnits = "K";
                            break;
-          case CELSIUS:    formattedUnits = "Â°C";
+          case CELSIUS:    formattedUnits = "°C";
                            break;
-          case FAHRENHEIT: formattedUnits = "Â°F";
+          case FAHRENHEIT: formattedUnits = "°F";
                            break;
           default:         throw new IllegalArgumentException();
       }
@@ -140,11 +140,11 @@ public class Temperature {
    * as follows
    * <pre><code>
    *    Temperature temperature = new Temperature(0, Temperature.Units.CELSIUS);
-   *    System.out.println(temperature.toString()); // prints "0Â Â°C"
+   *    System.out.println(temperature.toString()); // prints "0 °C"
    *    temperature.changeUnits(Temperature.Units.FAHRENHEIT);
-   *    System.out.println(temperature.toString()); // prints "32Â Â°F"
+   *    System.out.println(temperature.toString()); // prints "32 °F"
    *    temperature.changeUnits(Temperature.Units.KELVIN);
-   *    System.out.println(temperature.toString()); // prints "273.15Â K"
+   *    System.out.println(temperature.toString()); // prints "273.15 K"
    * </code></pre>
    */
   public String toString() {

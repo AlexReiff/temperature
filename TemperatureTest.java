@@ -17,7 +17,13 @@ public class TemperatureTests {
 
    @Test
    public void testGetUnits(){
-      
+	   //base cases
+       Temperature testerK = new Temperature(0.0, Temperature.Units.KELVIN);
+       assertEquals("It is in KELVIN",Temperature.Units.KELVIN,testerK.getUnits());
+       Temperature testerC = new Temperature(0.0, Temperature.Units.CELSIUS);
+       assertEquals("It is in CELSIUS",Temperature.Units.CELSIUS,testerC.getUnits());
+       Temperature testerF = new Temperature(0.0, Temperature.Units.FAHRENHEIT);
+       assertEquals("It is in FAHRENHEIT",Temperature.Units.FAHRENHEIT,testerF.getUnits());
    }
 
    @Test
